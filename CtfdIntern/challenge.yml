@@ -1,0 +1,15 @@
+name: Coffee Enjoyers B)
+author: suchomir
+category: web
+description: "You know what is amaizing? Coffee! But you know what is even better than coffee? Free coffee!"
+value: 50
+
+type: standard
+
+image: .
+
+flags:
+  - flag{c0ff3_m45t3r}
+  - c0ff3_m45t3r
+
+version: "0.1"

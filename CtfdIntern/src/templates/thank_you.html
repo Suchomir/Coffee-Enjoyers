@@ -1,0 +1,32 @@
+{%extends "base.html"%}
+
+
+{%block content%}
+
+<script src="{{url_for('static', filename='script2.js')}}"></script>
+    {% if not discount: %}
+        <div class="img-fluid" style="background-image: url(static/img/coffee.jpg); padding:20%; ">
+            <p style="color: white; font-size: xxx-large; text-align: center; font-family: Lucida Handwriting;">Something went wrong. Try again later!
+        </div>
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+    {% endif %}
+    
+    {% if discount == '100' and discount: %}
+    
+        <div class="img-fluid" style="background-image: url(static/img/coffee.jpg); padding:22%; ">
+            <p style="color: white; font-size: xxx-large; text-align: center; font-family: Lucida Console;">Enjoy your free
+                coffee and flag! flag{c0ff3_m45t3r}
+        </div>
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+    {% endif %}
+
+
+    {% if discount != '100' and discount: %}
+        <div class="img-fluid" style="background-image: url(static/img/coffee.jpg); padding:21%; ">
+            <p style="color: white; font-size: xxx-large; text-align: center; font-family: Lucida Handwriting;">Enjoy your
+                cheeper coffee!
+        </div>
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+    {% endif %}
+
+{% endblock %}

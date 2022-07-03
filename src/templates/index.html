@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+
+{% block content %}
+<div class="img-fluid" style="background-image: url(static/img/coffee.jpg); padding-top: 300px; height: calc(100vh - 55px)">
+	<div class="row d-flex">
+		<p class="text-white fs-1 text-center align-text-top" style="font-family: Lucida Handwriting;">
+			Coffee from Coffe Enjoyers
+			<img class="inline-block" src="{{url_for('static', filename='img/smile.png')}}" style="width: 30px; height: 30px"></img>
+		</p>
+	</div>
+	
+	<p class="text-white fs-1 text-center" style="font-family: Lucida Handwriting;" >Your #1 coffee, when you wake up in the morning! :))</p>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="img-fluid" style="background-image: url(static/img/coffee2.jpg); padding-bottom: 11%; padding-top: 12%;" >
+<div class="container">
+    <div class="row row-cols-2">
+ {% for item in items %}
+    <div class="col">
+            <div class="card mb-3" >
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{item.image}}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.title}}</h5>
+                            <p class="card-text">{{item.description}}</p>
+                            <p class="card-text"><small class="text-muted">Price: {{item.price}}$</small></p>
+                            <a href="/buy/{{item.id}}" class="btn btn-primary" type="submit">Buy now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+ {% endfor %} 
+</div>
+</div>
+
+</div>
+{% endblock %}

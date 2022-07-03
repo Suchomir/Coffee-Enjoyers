@@ -1,0 +1,17 @@
+<script>
+
+    // fetch('/buy/<id>', {
+    //     method: 'POST',
+    //     body: JSON.stringify({ discount: "{{ discount }}" }),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    // }).then(() => {
+    //     // { "location": "/thank_you?discount=100"}
+    //     // parse response from server
+    //     // window.location = response.location 
+    //     window.location = '/thank_you';
+    // })
+        document.cookie = "discount={{discount}}; path=/thank_you";
+        window.location = '/thank_you';
+</script>

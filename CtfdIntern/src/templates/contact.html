@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="img-fluid" style="background-image: url(static/img/coffee3.jpg);">
+    <p style="color: white; font-size: xx-large; font-family: Courier New; padding: 6%; text-shadow: 2px 2px #000000;" class="text-center">
+        Leave us your feedback and maybe you will recive something as a thank you :33 
+    </p>
+
+    <form action="#" method="post">
+        <div class="mb-3" style="text-align: center; color: white; width: 30%; margin: auto;" >
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"  required>
+        </div>
+        <div class="mb-3" style="text-align: center; color: white; width: 30%; margin: auto">
+            <label for="exampleFormControlTextarea1" class="form-label">Your message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value="feedback" required></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary"  style="text-align: center; margin-left: 48%; margin-bottom: 5%;" value="Submit">
+    </form>
+
+
+    <div style="text-align: center; color: white; margin: auto; font-size: 30px; padding-bottom: 12%; text-shadow: 2px 2px #000000;">
+        {{discount_code}}
+    </div>
+</div>
+{% endblock %}
