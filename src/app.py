@@ -66,15 +66,12 @@ def shop():
 
 @app.route('/transaction/<id>', methods=["GET","POST"])
 def transaction(id):
-    # get discount from request json
-    # set cookie by getting discount value from json
     print(request.json)
     VALID_COUPONS.pop(VALID_COUPONS.index(discount))
     return make_response("OK")
 
 @app.route('/thank_you', methods=["GET"])
 def thank_you():
-    # get discount from somewhere
     discount = request.cookies.get('discount')
     return render_template("thank_you.html", discount=discount)
 
@@ -91,8 +88,6 @@ def buy(id):
     else:
         return redirect("/error")
 
-
-# OK
 @app.route("/contact", methods=["GET","POST"])
 def discount():
     if request.method == "POST":
